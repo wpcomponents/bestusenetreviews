@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-03-30T04:44:41+00:00\n"
+"POT-Creation-Date: 2021-03-30T14:59:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.1.0\n"
 "X-Domain: bestusenetreviews\n"
@@ -35,6 +35,7 @@ msgid "https://optimizewp.com/"
 msgstr ""
 
 #: blocks/site-logo.php:8
+#: blocks/review-hero.php:53
 msgid "Site Logo"
 msgstr ""
 
@@ -55,7 +56,21 @@ msgid "Get Special"
 msgstr ""
 
 #: blocks/review-cta.php:25
+#: blocks/review-sidebar.php:59
 msgid "% Discount Now"
+msgstr ""
+
+#: blocks/review-sidebar.php:8
+msgid "Review Sidebar"
+msgstr ""
+
+#: blocks/review-sidebar.php:9
+msgid "Displays a reviews in sidebar."
+msgstr ""
+
+#: blocks/review-sidebar.php:56
+#: includes/review.php:122
+msgid "Visit "
 msgstr ""
 
 #: blocks/template-part.php:8
@@ -65,6 +80,14 @@ msgstr ""
 
 #: blocks/template-part.php:9
 msgid "Displays the template part."
+msgstr ""
+
+#: blocks/review-hero.php:8
+msgid "Review Hero"
+msgstr ""
+
+#: blocks/review-hero.php:9
+msgid "Displays a review hero."
 msgstr ""
 
 #: blocks/circle-icon.php:8
@@ -112,44 +135,54 @@ msgstr ""
 msgid "Displays a list of reviews."
 msgstr ""
 
-#: blocks/review-list.php:178
-#: blocks/review-list.php:232
+#: blocks/review-list.php:139
+#: includes/review.php:9
+msgid "Reviews"
+msgstr ""
+
+#: blocks/review-list.php:167
+msgid "Learn More About"
+msgstr ""
+
+#: blocks/review-list.php:189
+#: blocks/review-list.php:244
 msgid "Free Trial"
 msgstr ""
 
-#: blocks/review-list.php:179
+#: blocks/review-list.php:190
 msgid "VPN Included"
 msgstr ""
 
-#: blocks/review-list.php:180
-#: blocks/review-list.php:235
+#: blocks/review-list.php:191
+#: blocks/review-list.php:247
 msgid "Unlimited Speeds"
 msgstr ""
 
-#: blocks/review-list.php:184
+#: blocks/review-list.php:195
 msgid "Days of Retention"
 msgstr ""
 
-#: blocks/review-list.php:185
-#: blocks/review-list.php:234
+#: blocks/review-list.php:196
+#: blocks/review-list.php:246
 msgid "Connections"
 msgstr ""
 
-#: blocks/review-list.php:186
-#: blocks/review-list.php:233
+#: blocks/review-list.php:197
+#: blocks/review-list.php:245
 msgid "US & EU Servers"
 msgstr ""
 
-#: blocks/review-list.php:215
-#: blocks/review-list.php:297
+#: blocks/review-list.php:226
+#: blocks/review-list.php:321
 msgid "Visit Website"
 msgstr ""
 
-#: blocks/review-list.php:236
+#: blocks/review-list.php:248
 msgid "Annual Plans"
 msgstr ""
 
-#: blocks/review-list.php:285
+#: blocks/review-list.php:275
+#: blocks/review-list.php:309
 msgid "Yes"
 msgstr ""
 
@@ -314,10 +347,6 @@ msgctxt "Review Singular Name"
 msgid "Review"
 msgstr ""
 
-#: includes/review.php:9
-msgid "Reviews"
-msgstr ""
-
 #: includes/review.php:10
 #: includes/review.php:37
 msgid "Review"
@@ -419,16 +448,8 @@ msgstr ""
 msgid "Review Description"
 msgstr ""
 
-#: includes/review.php:168
-msgid "Visit "
-msgstr ""
-
-#: includes/review.php:168
+#: includes/review.php:122
 msgid " Now"
-msgstr ""
-
-#: includes/setup.php:131
-msgid "The latest version of Advanced Custom Fields is bundled with this theme so we have deactivated the plugin."
 msgstr ""
 
 #: includes/admin.php:28
