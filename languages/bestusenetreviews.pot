@@ -1,0 +1,436 @@
+# Copyright (C) 2021 Lee Anthony
+# This file is distributed under the GPL-v2-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Best Usenet Reviews 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bestusenetreviews\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-30T04:44:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: bestusenetreviews\n"
+
+#. Theme Name of the theme
+msgid "Best Usenet Reviews"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://wordpress.org/themes/bestusenetreviews"
+msgstr ""
+
+#. Description of the theme
+msgid "WordPress theme for Best Usenet Reviews."
+msgstr ""
+
+#. Author of the theme
+msgid "Lee Anthony"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://optimizewp.com/"
+msgstr ""
+
+#: blocks/site-logo.php:8
+msgid "Site Logo"
+msgstr ""
+
+#: blocks/site-logo.php:9
+msgid "Displays the site logo."
+msgstr ""
+
+#: blocks/review-cta.php:8
+msgid "Review CTA"
+msgstr ""
+
+#: blocks/review-cta.php:9
+msgid "Displays a review cta."
+msgstr ""
+
+#: blocks/review-cta.php:25
+msgid "Get Special"
+msgstr ""
+
+#: blocks/review-cta.php:25
+msgid "% Discount Now"
+msgstr ""
+
+#: blocks/template-part.php:8
+#: includes/templates.php:52
+msgid "Template Part"
+msgstr ""
+
+#: blocks/template-part.php:9
+msgid "Displays the template part."
+msgstr ""
+
+#: blocks/circle-icon.php:8
+msgid "Icon Circle"
+msgstr ""
+
+#: blocks/circle-icon.php:9
+msgid "Displays an icon circle."
+msgstr ""
+
+#: blocks/review-rating.php:8
+msgid "Review Rating"
+msgstr ""
+
+#: blocks/review-rating.php:9
+msgid "Displays a review rating."
+msgstr ""
+
+#: blocks/post-content.php:9
+#: blocks/post-content.php:36
+msgid "Post Content"
+msgstr ""
+
+#: blocks/post-content.php:10
+msgid "Displays the post content."
+msgstr ""
+
+#: blocks/post-excerpt.php:8
+msgid "Post Excerpt"
+msgstr ""
+
+#: blocks/post-excerpt.php:9
+msgid "Displays the post excerpt."
+msgstr ""
+
+#: blocks/button.php:11
+msgid "Large"
+msgstr ""
+
+#: blocks/review-list.php:8
+msgid "Review List"
+msgstr ""
+
+#: blocks/review-list.php:9
+msgid "Displays a list of reviews."
+msgstr ""
+
+#: blocks/review-list.php:178
+#: blocks/review-list.php:232
+msgid "Free Trial"
+msgstr ""
+
+#: blocks/review-list.php:179
+msgid "VPN Included"
+msgstr ""
+
+#: blocks/review-list.php:180
+#: blocks/review-list.php:235
+msgid "Unlimited Speeds"
+msgstr ""
+
+#: blocks/review-list.php:184
+msgid "Days of Retention"
+msgstr ""
+
+#: blocks/review-list.php:185
+#: blocks/review-list.php:234
+msgid "Connections"
+msgstr ""
+
+#: blocks/review-list.php:186
+#: blocks/review-list.php:233
+msgid "US & EU Servers"
+msgstr ""
+
+#: blocks/review-list.php:215
+#: blocks/review-list.php:297
+msgid "Visit Website"
+msgstr ""
+
+#: blocks/review-list.php:236
+msgid "Annual Plans"
+msgstr ""
+
+#: blocks/review-list.php:285
+msgid "Yes"
+msgstr ""
+
+#: includes/templates.php:9
+#: includes/templates.php:17
+msgid "Templates"
+msgstr ""
+
+#: includes/templates.php:10
+msgid "Template"
+msgstr ""
+
+#: includes/templates.php:11
+msgctxt "Admin Menu text"
+msgid "Templates"
+msgstr ""
+
+#: includes/templates.php:12
+msgctxt "Template"
+msgid "Add New"
+msgstr ""
+
+#: includes/templates.php:13
+msgid "Add New Template"
+msgstr ""
+
+#: includes/templates.php:14
+msgid "New Template"
+msgstr ""
+
+#: includes/templates.php:15
+msgid "Edit Template"
+msgstr ""
+
+#: includes/templates.php:16
+msgid "View Template"
+msgstr ""
+
+#: includes/templates.php:18
+msgid "Search Templates"
+msgstr ""
+
+#: includes/templates.php:19
+msgid "Parent Template:"
+msgstr ""
+
+#: includes/templates.php:20
+msgid "No templates found."
+msgstr ""
+
+#: includes/templates.php:21
+msgid "No templates found in Trash."
+msgstr ""
+
+#: includes/templates.php:22
+msgid "Template archives"
+msgstr ""
+
+#: includes/templates.php:23
+msgid "Insert into template"
+msgstr ""
+
+#: includes/templates.php:24
+msgid "Uploaded to this template"
+msgstr ""
+
+#: includes/templates.php:25
+msgid "Filter templates list"
+msgstr ""
+
+#: includes/templates.php:26
+msgid "Templates list navigation"
+msgstr ""
+
+#: includes/templates.php:27
+msgid "Templates list"
+msgstr ""
+
+#: includes/templates.php:29
+#: includes/templates.php:71
+msgid "Template parts to include in your templates."
+msgstr ""
+
+#: includes/templates.php:51
+#: includes/templates.php:59
+msgid "Template Parts"
+msgstr ""
+
+#: includes/templates.php:53
+msgctxt "Admin Menu text"
+msgid "Template Parts"
+msgstr ""
+
+#: includes/templates.php:54
+msgctxt "Template Part"
+msgid "Add New"
+msgstr ""
+
+#: includes/templates.php:55
+msgid "Add New Template Part"
+msgstr ""
+
+#: includes/templates.php:56
+msgid "New Template Part"
+msgstr ""
+
+#: includes/templates.php:57
+msgid "Edit Template Part"
+msgstr ""
+
+#: includes/templates.php:58
+msgid "View Template Part"
+msgstr ""
+
+#: includes/templates.php:60
+msgid "Search Template Parts"
+msgstr ""
+
+#: includes/templates.php:61
+msgid "Parent Template Part:"
+msgstr ""
+
+#: includes/templates.php:62
+msgid "No template parts found."
+msgstr ""
+
+#: includes/templates.php:63
+msgid "No template parts found in Trash."
+msgstr ""
+
+#: includes/templates.php:64
+msgid "Template part archives"
+msgstr ""
+
+#: includes/templates.php:65
+msgid "Insert into template part"
+msgstr ""
+
+#: includes/templates.php:66
+msgid "Uploaded to this template part"
+msgstr ""
+
+#: includes/templates.php:67
+msgid "Filter template parts list"
+msgstr ""
+
+#: includes/templates.php:68
+msgid "Template parts list navigation"
+msgstr ""
+
+#: includes/templates.php:69
+msgid "Template parts list"
+msgstr ""
+
+#: includes/review.php:7
+msgctxt "Review General Name"
+msgid "Reviews"
+msgstr ""
+
+#: includes/review.php:8
+msgctxt "Review Singular Name"
+msgid "Review"
+msgstr ""
+
+#: includes/review.php:9
+msgid "Reviews"
+msgstr ""
+
+#: includes/review.php:10
+#: includes/review.php:37
+msgid "Review"
+msgstr ""
+
+#: includes/review.php:11
+msgid "Review Archives"
+msgstr ""
+
+#: includes/review.php:12
+msgid "Review Attributes"
+msgstr ""
+
+#: includes/review.php:13
+msgid "Parent Review:"
+msgstr ""
+
+#: includes/review.php:14
+msgid "All Reviews"
+msgstr ""
+
+#: includes/review.php:15
+msgid "Add New Review"
+msgstr ""
+
+#: includes/review.php:16
+msgid "Add New"
+msgstr ""
+
+#: includes/review.php:17
+msgid "New Review"
+msgstr ""
+
+#: includes/review.php:18
+msgid "Edit Review"
+msgstr ""
+
+#: includes/review.php:19
+msgid "Update Review"
+msgstr ""
+
+#: includes/review.php:20
+msgid "View Review"
+msgstr ""
+
+#: includes/review.php:21
+msgid "View Reviews"
+msgstr ""
+
+#: includes/review.php:22
+msgid "Search Review"
+msgstr ""
+
+#: includes/review.php:23
+msgid "Not found"
+msgstr ""
+
+#: includes/review.php:24
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/review.php:25
+msgid "Featured Image"
+msgstr ""
+
+#: includes/review.php:26
+msgid "Set featured image"
+msgstr ""
+
+#: includes/review.php:27
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/review.php:28
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/review.php:29
+msgid "Insert into review"
+msgstr ""
+
+#: includes/review.php:30
+msgid "Uploaded to this review"
+msgstr ""
+
+#: includes/review.php:31
+msgid "Reviews list"
+msgstr ""
+
+#: includes/review.php:32
+msgid "Reviews list navigation"
+msgstr ""
+
+#: includes/review.php:33
+msgid "Filter reviews list"
+msgstr ""
+
+#: includes/review.php:38
+msgid "Review Description"
+msgstr ""
+
+#: includes/review.php:168
+msgid "Visit "
+msgstr ""
+
+#: includes/review.php:168
+msgid " Now"
+msgstr ""
+
+#: includes/setup.php:131
+msgid "The latest version of Advanced Custom Fields is bundled with this theme so we have deactivated the plugin."
+msgstr ""
+
+#: includes/admin.php:28
+msgid "Order"
+msgstr ""

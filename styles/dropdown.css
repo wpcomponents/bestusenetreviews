@@ -1,0 +1,114 @@
+.wpml-ls-legacy-dropdown-click {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	max-width: 100%;
+	font-size: 16px;
+	white-space: nowrap;
+}
+
+.wpml-ls-legacy-dropdown-click > ul {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style-type: none
+}
+
+.wpml-ls-item {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+}
+
+.wpml-ls-item:before {
+	display: none;
+}
+
+.wpml-ls-native,
+.wpml-ls-display {
+	vertical-align: middle
+}
+
+.wpml-ls-item-toggle {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5em 1.5em .5em 0;
+	border: 0;
+	text-decoration: none;
+	color: var(--wp--preset--color--body);
+}
+
+.wpml-ls-item-toggle:after {
+	content: "";
+	vertical-align: middle;
+	display: inline-block;
+	border: .35em solid transparent;
+	border-top: .5em solid;
+	position: absolute;
+	right: 10px;
+	top: calc(50% - .175em)
+}
+
+.wpml-ls-link {
+	display: block;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	line-height: 1;
+	color: var(--wp--preset--color--body);
+	border: 0;
+	white-space: nowrap;
+	background: #fff;
+}
+
+.wpml-ls-link:hover {
+	color: var(--wp--preset--color--link);
+}
+
+.wpml-ls-sub-menu {
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: auto;
+	right: 0;
+	width: auto;
+	margin: .5em 0 0;
+	z-index: 101;
+	padding: 0.5em 0;
+	background: #fff;
+	border: 0;
+	box-shadow: var(--shadow);
+	list-style-type: none;
+}
+
+.wpml-ls-flag {
+	display: inline;
+	vertical-align: middle
+}
+
+.wpml-ls-flag + span {
+	margin-left: .4em
+}
+
+.wpml-ls-item-toggle:before,
+.wpml-ls-item-toggle:after {
+	display: block;
+	content: '';
+	background-repeat: no-repeat;
+}
+
+.wpml-ls-item-toggle:before {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.7 19.7'%3E%3Cpath fill='%23b27742' d='M10 1c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm6.2 5.4h-2.7c-.3-1.1-.7-2.2-1.2-3.2 1.7.6 3.1 1.7 3.9 3.2zM10 2.8c.8 1.1 1.3 2.3 1.7 3.6H8.3c.4-1.3.9-2.5 1.7-3.6zm-7 9c-.1-.6-.2-1.2-.2-1.8s.1-1.2.2-1.8h3c0 .6-.1 1.2-.1 1.8s0 1.2.1 1.8H3zm.8 1.8h2.7c.3 1.1.7 2.2 1.2 3.2-1.7-.6-3.1-1.7-3.9-3.2zm2.6-7.2H3.8C4.6 4.9 6 3.8 7.7 3.2c-.6 1-1 2.1-1.3 3.2zM10 17.2c-.7-1.1-1.3-2.3-1.7-3.6h3.4c-.4 1.3-1 2.5-1.7 3.6zm2.1-5.4H7.9c-.1-.6-.1-1.2-.1-1.8s.1-1.2.1-1.8h4.2c.1.6.1 1.2.1 1.8s0 1.2-.1 1.8zm.2 5c.5-1 .9-2.1 1.2-3.2h2.7c-.8 1.5-2.2 2.6-3.9 3.2zm1.6-5c.1-.6.1-1.2.1-1.8s0-1.2-.1-1.8h3c.1.6.2 1.2.2 1.8s-.1 1.2-.2 1.8h-3z'/%3E%3C/svg%3E");
+	height: 1em;
+	width: 1em;
+	margin-right: .5em;
+}
+
+.wpml-ls-item-toggle:after {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 118.6 75.6'%3E%3Cdefs/%3E%3Cpath fill='%233c444f' d='M59.3 74.9L1 16.5 16.5 1l42.8 42.8L102.1 1l15.5 15.5z'/%3E%3C/svg%3E");
+	height: 0.5em;
+	width: 0.5em;
+	margin-top: .1em;
+	border: 0;
+}

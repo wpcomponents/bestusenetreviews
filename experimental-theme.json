@@ -1,0 +1,79 @@
+{
+  "settings": {
+    "defaults": {
+      "typography": {
+        "fontFamilies": [
+          {
+            "fontFamily": "Mulish,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+            "name": "Mulish",
+            "slug": "mulish"
+          },
+          {
+            "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+            "name": "System",
+            "slug": "system"
+          },
+          {
+            "fontFamily": "Constantia, \"Lucida Bright\", Lucidabright, \"Lucida Serif\", Lucida, \"DejaVu Serif\", \"Bitstream Vera Serif\", \"Liberation Serif\", Georgia, serif",
+            "name": "Serif",
+            "slug": "serif"
+          },
+          {
+            "fontFamily": "Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", Monaco, \"Courier New\", Courier, monospace",
+            "name": "Monospace",
+            "slug": "monospace"
+          }
+        ]
+      },
+      "border": {
+        "customRadius": false
+      }
+    }
+  },
+  "styles": {
+    "root": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--normal)",
+        "fontFamily": "var(--wp--preset--font-family--mulish)"
+      }
+    },
+    "core/heading/h1": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--huge)"
+      }
+    },
+    "core/heading/h2": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--large)"
+      }
+    },
+    "core/heading/h3": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--medium)"
+      }
+    },
+    "core/heading/h4": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--normal)"
+      }
+    },
+    "core/heading/h5": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--small)"
+      }
+    },
+    "core/heading/h6": {
+      "typography": {
+        "fontSize": "var(--wp--preset--font-size--small)"
+      }
+    }
+  },
+  "templateParts": {
+    "header": {
+      "area": "header"
+    },
+    "footer": {
+      "area": "footer"
+    }
+  }
+}

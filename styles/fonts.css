@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/mulish-v3-latin-regular.eot');
+	src: local(''),
+	url('../fonts/mulish-v3-latin-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/mulish-v3-latin-regular.woff2') format('woff2'), url('../fonts/mulish-v3-latin-regular.woff') format('woff'), url('../fonts/mulish-v3-latin-regular.ttf') format('truetype'), url('../fonts/mulish-v3-latin-regular.svg#Mulish') format('svg');
+}
+
+@font-face {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/mulish-v3-latin-700.eot');
+	src: local(''),
+	url('../fonts/mulish-v3-latin-700.eot?#iefix') format('embedded-opentype'), url('../fonts/mulish-v3-latin-700.woff2') format('woff2'), url('../fonts/mulish-v3-latin-700.woff') format('woff'), url('../fonts/mulish-v3-latin-700.ttf') format('truetype'), url('../fonts/mulish-v3-latin-700.svg#Mulish') format('svg');
+}
+
+@font-face {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/mulish-v3-latin-800.eot');
+	src: local(''),
+	url('../fonts/mulish-v3-latin-800.eot?#iefix') format('embedded-opentype'), url('../fonts/mulish-v3-latin-800.woff2') format('woff2'), url('../fonts/mulish-v3-latin-800.woff') format('woff'), url('../fonts/mulish-v3-latin-800.ttf') format('truetype'), url('../fonts/mulish-v3-latin-800.svg#Mulish') format('svg');
+}
+
+@font-face {
+	font-family: 'Mulish';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/mulish-v3-latin-italic.eot');
+	src: local(''),
+	url('../fonts/mulish-v3-latin-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/mulish-v3-latin-italic.woff2') format('woff2'), url('../fonts/mulish-v3-latin-italic.woff') format('woff'), url('../fonts/mulish-v3-latin-italic.ttf') format('truetype'), url('../fonts/mulish-v3-latin-italic.svg#Mulish') format('svg');
+}

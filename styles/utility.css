@@ -1,0 +1,169 @@
+.has-shadow {
+	box-shadow: var(--shadow);
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.justify-center {
+	justify-items: center;
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+	align-content: center;
+}
+
+.has-black-color {
+	color: #000000;
+}
+
+.has-black-background-color {
+	background-color: #000000;
+}
+
+.has-dark-color {
+	color: #302e2c;
+}
+
+.has-dark-background-color {
+	background-color: #302e2c;
+}
+
+.has-heading-color {
+	color: #3c444f;
+}
+
+.has-heading-background-color {
+	background-color: #3c444f;
+}
+
+.has-body-color {
+	color: #565656;
+}
+
+.has-body-background-color {
+	background-color: #565656;
+}
+
+.has-medium-color {
+	color: #737373;
+}
+
+.has-medium-background-color {
+	background-color: #737373;
+}
+
+.has-gray-color {
+	color: #a3a3a3;
+}
+
+.has-gray-background-color {
+	background-color: #a3a3a3;
+}
+
+.has-shadow-color {
+	color: rgba(159, 159, 159, 0.3);
+}
+
+.has-shadow-background-color {
+	background-color: rgba(159, 159, 159, 0.3);
+}
+
+.has-light-color {
+	color: #f1f2f2;
+}
+
+.has-light-background-color {
+	background-color: #f1f2f2;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-link-color {
+	color: #da9857;
+}
+
+.has-link-background-color {
+	background-color: #da9857;
+}
+
+.has-secondary-color {
+	color: #b27742;
+}
+
+.has-secondary-background-color {
+	background-color: #b27742;
+}
+
+.has-overlay-color {
+	color: #ffefe0;
+}
+
+.has-overlay-background-color {
+	background-color: #ffefe0;
+}
+
+.has-opaque-color {
+	color: #fff8f1;
+}
+
+.has-opaque-background-color {
+	background-color: #fff8f1;
+}
+
+.has-success-color {
+	color: #57bb81;
+}
+
+.has-success-background-color {
+	background-color: #57bb81;
+}
+
+.has-primary-gradient-background {
+	background: linear-gradient(180deg, #da9857 0%, #a87039 100%);
+}
+
+.has-secondary-gradient-background {
+	background: linear-gradient(180deg, #c7c7c7 0%, #aeaeae 100%);
+}
+
+.has-small-font-size {
+	font-size: 13px;
+}
+
+.has-normal-font-size {
+	font-size: 16px;
+}
+
+.has-medium-font-size {
+	font-size: 20px;
+}
+
+.has-large-font-size {
+	font-size: 36px;
+}
+
+.has-huge-font-size {
+	font-size: 42px;
+}
+
+.has-border-radius {
+	border-radius: var(--border-radius);
+}

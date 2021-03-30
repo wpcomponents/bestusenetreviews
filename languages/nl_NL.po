@@ -1,0 +1,430 @@
+# Copyright (C) 2021 Lee Anthony
+# This file is distributed under the GPL-v2-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Best Usenet Reviews 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/"
+"bestusenetreviews\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-30T04:44:41+00:00\n"
+"PO-Revision-Date: 2021-03-30 17:43+0800\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Domain: bestusenetreviews\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#. Theme Name of the theme
+msgid "Best Usenet Reviews"
+msgstr "Beste Usenet-beoordelingen"
+
+#. Theme URI of the theme
+msgid "http://wordpress.org/themes/bestusenetreviews"
+msgstr ""
+
+#. Description of the theme
+msgid "WordPress theme for Best Usenet Reviews."
+msgstr ""
+
+#. Author of the theme
+msgid "Lee Anthony"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://optimizewp.com/"
+msgstr ""
+
+#: blocks/site-logo.php:8
+msgid "Site Logo"
+msgstr "Site Logo"
+
+#: blocks/site-logo.php:9
+msgid "Displays the site logo."
+msgstr ""
+
+#: blocks/review-cta.php:8
+msgid "Review CTA"
+msgstr ""
+
+#: blocks/review-cta.php:9
+msgid "Displays a review cta."
+msgstr ""
+
+#: blocks/review-cta.php:25
+msgid "Get Special"
+msgstr "Krijg special"
+
+#: blocks/review-cta.php:25
+msgid "% Discount Now"
+msgstr "% korting nu"
+
+#: blocks/template-part.php:8 includes/templates.php:52
+msgid "Template Part"
+msgstr ""
+
+#: blocks/template-part.php:9
+msgid "Displays the template part."
+msgstr ""
+
+#: blocks/circle-icon.php:8
+msgid "Icon Circle"
+msgstr ""
+
+#: blocks/circle-icon.php:9
+msgid "Displays an icon circle."
+msgstr ""
+
+#: blocks/review-rating.php:8
+msgid "Review Rating"
+msgstr ""
+
+#: blocks/review-rating.php:9
+msgid "Displays a review rating."
+msgstr ""
+
+#: blocks/post-content.php:9 blocks/post-content.php:36
+msgid "Post Content"
+msgstr "Inhoud bericht"
+
+#: blocks/post-content.php:10
+msgid "Displays the post content."
+msgstr ""
+
+#: blocks/post-excerpt.php:8
+msgid "Post Excerpt"
+msgstr "Fragment bericht"
+
+#: blocks/post-excerpt.php:9
+msgid "Displays the post excerpt."
+msgstr ""
+
+#: blocks/button.php:11
+msgid "Large"
+msgstr "Groot"
+
+#: blocks/review-list.php:8
+msgid "Review List"
+msgstr ""
+
+#: blocks/review-list.php:9
+msgid "Displays a list of reviews."
+msgstr ""
+
+#: blocks/review-list.php:178 blocks/review-list.php:232
+msgid "Free Trial"
+msgstr "Gratis Proefperiode"
+
+#: blocks/review-list.php:179
+msgid "VPN Included"
+msgstr "VPN inbegrepen"
+
+#: blocks/review-list.php:180 blocks/review-list.php:235
+msgid "Unlimited Speeds"
+msgstr "Onbeperkte snelheden"
+
+#: blocks/review-list.php:184
+msgid "Days of Retention"
+msgstr "Dagen van retentie"
+
+#: blocks/review-list.php:185 blocks/review-list.php:234
+msgid "Connections"
+msgstr "Connecties"
+
+#: blocks/review-list.php:186 blocks/review-list.php:233
+msgid "US & EU Servers"
+msgstr "Amerikaanse en EU-servers"
+
+#: blocks/review-list.php:215 blocks/review-list.php:297
+msgid "Visit Website"
+msgstr "Bezoek Website"
+
+#: blocks/review-list.php:236
+msgid "Annual Plans"
+msgstr "Jaarplannen"
+
+#: blocks/review-list.php:285
+msgid "Yes"
+msgstr "Ja"
+
+#: includes/templates.php:9 includes/templates.php:17
+msgid "Templates"
+msgstr "Templates"
+
+#: includes/templates.php:10
+msgid "Template"
+msgstr "Sjabloon"
+
+#: includes/templates.php:11
+msgctxt "Admin Menu text"
+msgid "Templates"
+msgstr "Templates"
+
+#: includes/templates.php:12
+msgctxt "Template"
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: includes/templates.php:13
+msgid "Add New Template"
+msgstr "Nieuw sjabloon toevoegen"
+
+#: includes/templates.php:14
+msgid "New Template"
+msgstr "Nieuwe Template"
+
+#: includes/templates.php:15
+msgid "Edit Template"
+msgstr "Bewerk template"
+
+#: includes/templates.php:16
+msgid "View Template"
+msgstr "Bekijk Template"
+
+#: includes/templates.php:18
+msgid "Search Templates"
+msgstr "Zoek Templates"
+
+#: includes/templates.php:19
+msgid "Parent Template:"
+msgstr "Hoofdsjabloon:"
+
+#: includes/templates.php:20
+msgid "No templates found."
+msgstr "Geen templates gevonden."
+
+#: includes/templates.php:21
+msgid "No templates found in Trash."
+msgstr "Geen sjablonen gevonden in de prullenbak."
+
+#: includes/templates.php:22
+msgid "Template archives"
+msgstr "Sjabloon-archieven"
+
+#: includes/templates.php:23
+msgid "Insert into template"
+msgstr ""
+
+#: includes/templates.php:24
+msgid "Uploaded to this template"
+msgstr "Geüpload naar dit sjabloon"
+
+#: includes/templates.php:25
+msgid "Filter templates list"
+msgstr "Sjabloonlijst filteren"
+
+#: includes/templates.php:26
+msgid "Templates list navigation"
+msgstr "Sjabloonlijst-navigatie"
+
+#: includes/templates.php:27
+msgid "Templates list"
+msgstr "Sjabloonlijst"
+
+#: includes/templates.php:29 includes/templates.php:71
+msgid "Template parts to include in your templates."
+msgstr "Sjabloon-onderdelen om in de sjablonen op te nemen."
+
+#: includes/templates.php:51 includes/templates.php:59
+msgid "Template Parts"
+msgstr "Template onderdelen"
+
+#: includes/templates.php:53
+msgctxt "Admin Menu text"
+msgid "Template Parts"
+msgstr "Template onderdelen"
+
+#: includes/templates.php:54
+msgctxt "Template Part"
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: includes/templates.php:55
+msgid "Add New Template Part"
+msgstr ""
+
+#: includes/templates.php:56
+msgid "New Template Part"
+msgstr ""
+
+#: includes/templates.php:57
+msgid "Edit Template Part"
+msgstr ""
+
+#: includes/templates.php:58
+msgid "View Template Part"
+msgstr ""
+
+#: includes/templates.php:60
+msgid "Search Template Parts"
+msgstr "Doorzoek sjabloon-onderdelen"
+
+#: includes/templates.php:61
+msgid "Parent Template Part:"
+msgstr "Hoofd-sjabloon-onderdeel:"
+
+#: includes/templates.php:62
+msgid "No template parts found."
+msgstr ""
+
+#: includes/templates.php:63
+msgid "No template parts found in Trash."
+msgstr "Geen sjabloon-onderdelen gevonden in de prullenbak."
+
+#: includes/templates.php:64
+msgid "Template part archives"
+msgstr "Archieven met sjabloon-onderdelen"
+
+#: includes/templates.php:65
+msgid "Insert into template part"
+msgstr ""
+
+#: includes/templates.php:66
+msgid "Uploaded to this template part"
+msgstr ""
+
+#: includes/templates.php:67
+msgid "Filter template parts list"
+msgstr "Lijst met sjabloon-onderdelen filteren"
+
+#: includes/templates.php:68
+msgid "Template parts list navigation"
+msgstr "Navigatie door de lijst met sjabloon-onderdelen"
+
+#: includes/templates.php:69
+msgid "Template parts list"
+msgstr "Lijst met sjabloon-onderdelen"
+
+#: includes/review.php:7
+msgctxt "Review General Name"
+msgid "Reviews"
+msgstr "Beoordelingen"
+
+#: includes/review.php:8
+msgctxt "Review Singular Name"
+msgid "Review"
+msgstr "Beoordeling"
+
+#: includes/review.php:9
+msgid "Reviews"
+msgstr "Beoordelingen"
+
+#: includes/review.php:10 includes/review.php:37
+msgid "Review"
+msgstr "Beoordeling"
+
+#: includes/review.php:11
+msgid "Review Archives"
+msgstr ""
+
+#: includes/review.php:12
+msgid "Review Attributes"
+msgstr ""
+
+#: includes/review.php:13
+msgid "Parent Review:"
+msgstr ""
+
+#: includes/review.php:14
+msgid "All Reviews"
+msgstr "Alle beoordelingen"
+
+#: includes/review.php:15
+msgid "Add New Review"
+msgstr "Nieuwe Beoordeling Toevoegen"
+
+#: includes/review.php:16
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: includes/review.php:17
+msgid "New Review"
+msgstr "Nieuwe Beoordeling"
+
+#: includes/review.php:18
+msgid "Edit Review"
+msgstr "Review bijwerken"
+
+#: includes/review.php:19
+msgid "Update Review"
+msgstr "Review bijwerken"
+
+#: includes/review.php:20
+msgid "View Review"
+msgstr "Beoordelingen Bekijken"
+
+#: includes/review.php:21
+msgid "View Reviews"
+msgstr "Bekijk Reviews"
+
+#: includes/review.php:22
+msgid "Search Review"
+msgstr "Beoordeling zoeken"
+
+#: includes/review.php:23
+msgid "Not found"
+msgstr "Niet gevonden"
+
+#: includes/review.php:24
+msgid "Not found in Trash"
+msgstr "Niet gevonden in prullenbak"
+
+#: includes/review.php:25
+msgid "Featured Image"
+msgstr "Uitgelichte afbeelding"
+
+#: includes/review.php:26
+msgid "Set featured image"
+msgstr "Uitgelichte afbeelding instellen"
+
+#: includes/review.php:27
+msgid "Remove featured image"
+msgstr "Verwijder uitgelichte afbeelding"
+
+#: includes/review.php:28
+msgid "Use as featured image"
+msgstr "Gebruik als uitgelichte afbeelding"
+
+#: includes/review.php:29
+msgid "Insert into review"
+msgstr ""
+
+#: includes/review.php:30
+msgid "Uploaded to this review"
+msgstr ""
+
+#: includes/review.php:31
+msgid "Reviews list"
+msgstr "Review lijst"
+
+#: includes/review.php:32
+msgid "Reviews list navigation"
+msgstr "Review lijst navigatie"
+
+#: includes/review.php:33
+msgid "Filter reviews list"
+msgstr "Filter reviews lijst"
+
+#: includes/review.php:38
+msgid "Review Description"
+msgstr "Beschrijving van review"
+
+#: includes/review.php:168
+msgid "Visit "
+msgstr "Bezoeken "
+
+#: includes/review.php:168
+msgid " Now"
+msgstr " Nwo"
+
+#: includes/setup.php:131
+msgid ""
+"The latest version of Advanced Custom Fields is bundled with this theme so "
+"we have deactivated the plugin."
+msgstr ""
+
+#: includes/admin.php:28
+msgid "Order"
+msgstr "Bestelling"
