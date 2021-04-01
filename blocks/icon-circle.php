@@ -8,7 +8,7 @@ namespace BestUsenetReviews\Theme;
 		'title'           => __( 'Icon Circle', 'bestusenetreviews' ),
 		'description'     => __( 'Displays an icon circle.', 'bestusenetreviews' ),
 		'render_callback' => __NAMESPACE__ . '\\render_icon_circle_block',
-		'icon'            => 'star',
+		'icon'            => 'star-empty',
 	] );
 } );
 

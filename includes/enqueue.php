@@ -5,7 +5,6 @@ namespace BestUsenetReviews\Theme;
 \add_action( 'after_setup_theme', function () {
 	\add_editor_style( 'fonts.css' );
 	\add_editor_style( 'style.css' );
-	\add_editor_style( 'styles/utility.css' );
 } );
 
 \add_action( 'wp_enqueue_scripts', function () {
@@ -15,6 +14,7 @@ namespace BestUsenetReviews\Theme;
 	enqueue_asset( 'utility.css' );
 	enqueue_asset( 'fonts.css' );
 	enqueue_asset( '../style.css' );
+	enqueue_asset( 'animate.js' );
 
 	\wp_deregister_style( 'wpml-legacy-dropdown-click-0' );
 } );
@@ -26,6 +26,7 @@ namespace BestUsenetReviews\Theme;
 \add_action( 'enqueue_block_editor_assets', function () {
 	enqueue_asset( 'editor.css' );
 	enqueue_asset( 'dropdown.css' );
+	enqueue_asset( 'utility.css' );
 	enqueue_asset( 'editor.js' );
 } );
 

@@ -24,17 +24,18 @@ namespace BestUsenetReviews\Theme;
  * @return void
  */
 function render_post_content_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
-	if ( \did_action( 'wp_body_open' ) ) {
-		global $post;
+	$admin = ! \did_action( 'wp_body_open' );
+	$post  = \get_post( $post_id );
+	$en_id = get_en_id( $post_id );
 
+	if ( $admin ) : ?>
+		<div class="wp-block-group__inner-container">
+			<h3><?php echo __( 'Post Content', 'bestusenetreviews' ); ?></h3>
+			<?php echo get_lorem_ipsum( 5 ); ?>
+		</div>
+	<?php else :
 		if ( isset( $post->post_content ) ) {
 			echo \apply_filters( 'the_content', $post->post_content );
 		}
-
-	} else {
-		echo '<div class="wp-block-group__inner-container">';
-		echo '<h3>' . __( 'Post Content', 'bestusenetreviews' ) . '</h3>';
-		echo get_lorem_ipsum();
-		echo '</div>';
-	}
+	endif;
 }

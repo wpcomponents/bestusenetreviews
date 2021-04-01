@@ -21,8 +21,8 @@ namespace BestUsenetReviews\Theme;
  * @param int    $post_id    The post ID this block is saved to.
  */
 function render_review_rating_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
-	$en_id      = \wpml_object_id_filter( $post_id, 'review', true, 'en' );
-	$rating     = (float) \get_field( 'rating', $en_id );
+	$en_id      = get_en_id( $post_id );
+	$rating     = isset( $block['rating'] ) ? $block['rating'] : (float) \get_field( 'rating', $en_id );
 	$color      = isset( $block['color'] ) ? $block['color'] : 'var(--wp--preset--color--link)';
 	$size       = 130;
 	$stroke     = $size / 20;

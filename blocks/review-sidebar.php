@@ -41,7 +41,7 @@ function render_review_sidebar_block( $block, $content = '', $is_preview = false
 		<?php while ( $reviews->have_posts() ) :
 			$reviews->the_post();
 			global $post;
-			$en_id = \wpml_object_id_filter( $post->ID, 'review', true, 'en' );
+			$en_id = get_en_id( $post->ID );
 			?>
 			<li class="review-sidebar">
 				<?php \the_post_thumbnail( '', [

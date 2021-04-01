@@ -3,52 +3,37 @@
 namespace BestUsenetReviews\Theme;
 
 \add_action( 'init', function () {
-	$template_parts = \array_unique( \wp_list_pluck( \get_posts( [
-		'numberposts' => -1,
-		'post_type'   => 'template_part',
-	] ), 'post_name' ) );
+	$template_parts = get_template_parts();
 
-	$tags = \apply_filters( 'template_part_tags', [
-		'header'  => 'header',
-		'inner'   => 'main',
-		'sidebar' => 'aside',
-		'footer'  => 'footer',
-		'default' => 'div',
-	] );
+	/**
+	 * @var $template_part \WP_Post
+	 */
+	foreach ( $template_parts as $template_part ) {
+		$template_part->attr  = '';
+		$template_part->class = \strtok( $template_part->post_name, '-' );
+		$template_part->tag   = \get_field( 'tag', $template_part->ID );
+		$attributes           = \get_field( 'attr', $template_part->ID );
 
-	\add_action( 'wp_body_open', function () use ( $template_parts, $tags ) {
-		$skip_links = '<ul class="skip-links">';
-
-		foreach ( $tags as $tag => $value ) {
-			if ( ! \in_array( $tag, $template_parts ) ) {
-				continue;
+		if ( \is_array( $attributes ) ) {
+			foreach ( $attributes as $attribute ) {
+				$template_part->attr .= "{$attribute['name']}='{$attribute['value']}'";
 			}
-
-			$skip_links .= \sprintf(
-				'<li class="skip-link"><a href="#%s" class="screen-reader-text">%s</a></li>',
-				$tag,
-				__( 'Skip to ', 'starter' ) . $tag
-			);
 		}
 
-		echo $skip_links . '</ul>';
-	} );
-
-	foreach ( $template_parts as $index => $name ) {
-		$tag = isset( $tags[ $name ] ) ? $tags[ $name ] : $tags['default'];
-
-		\add_action( "before_{$name}_template_part", function () use ( $name, $tag ) {
+		\add_action( "before_{$template_part->post_name}_template_part", function () use ( $template_part ) {
 			\printf(
-				'<%1$s class="wp-site-%2$s" id="%2$s">',
-				$tag,
-				$name
+				'<%s class="wp-site-%s" id="%s" %s>',
+				$template_part->tag,
+				$template_part->class,
+				$template_part->class,
+				$template_part->attr
 			);
 		} );
 
-		\add_action( "after_{$name}_template_part", function () use ( $tag ) {
+		\add_action( "after_{$template_part->post_name}_template_part", function () use ( $template_part ) {
 			\printf(
 				'</%1$s>',
-				$tag
+				$template_part->tag
 			);
 		} );
 	}
@@ -63,19 +48,55 @@ namespace BestUsenetReviews\Theme;
 
 	unset( $classes['blog'] );
 
-	return \array_flip( $classes );
+	$classes = \array_flip( $classes );
+
+	$template_parts = get_template_part_names();
+
+	if ( \in_array( 'sidebar', $template_parts ) ) {
+		$classes[] = 'has-sidebar';
+	}
+
+	return $classes;
 } );
 
 \add_action( 'wp_body_open', function () {
-	\printf( '<div class="wp-site-blocks">%s</div>', get_template() );
+	$template_part_names = get_template_part_names();
+	$tags                = get_template_parts_order();
+	$skip_links          = '<ul class="skip-links">';
+
+	foreach ( $tags as $tag => $value ) {
+		if ( ! \in_array( $tag, $template_part_names ) ) {
+			continue;
+		}
+
+		$skip_links .= \sprintf(
+			'<li class="skip-link"><a href="#%s" class="screen-reader-text">%s</a></li>',
+			$tag,
+			__( 'Skip to ', 'starter' ) . $tag
+		);
+	}
+
+	echo $skip_links . '</ul>';
+} );
+
+\add_action( 'wp_body_open', function () {
+	?>
+	<div class="wp-site-blocks">
+		<?php echo get_template(); ?>
+	</div>
+	<?php
 } );
 
 \add_filter( 'template_slug', function ( $slug ) {
 	global $post;
 
-	if ( \is_singular() && template_exists( "single-{$post->post_type}" ) ) {
-		$slug = "single-{$post->post_type}";
+	if ( \is_front_page() && template_exists( 'front-page' ) ) {
+		return 'front-page';
 	}
 
-	return $slug;
+	if ( \is_singular() && template_exists( "single-{$post->post_type}" ) ) {
+		return "single-{$post->post_type}";
+	}
+
+	return 'index';
 } );

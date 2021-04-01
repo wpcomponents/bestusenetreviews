@@ -58,59 +58,6 @@ namespace BestUsenetReviews\Theme;
 	\register_post_type( 'review', $args );
 } );
 
-\add_action( 'before_inner_template_part', function () {
-	if ( ! \is_singular( 'review' ) ) {
-		return;
-	}
-
-	global $post;
-	?>
-	<div class="review-intro-single">
-		<div class="wp-block-columns are-vertically-aligned-center no-margin">
-			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:25%">
-				<?php render_review_rating_block(
-					[
-						'color' => 'var(--wp--preset--color--link)',
-					],
-					'',
-					false,
-					$post->ID
-				); ?>
-			</div>
-
-			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:75%">
-				<strong><?php echo $post->post_excerpt; ?></strong>
-			</div>
-		</div>
-
-		<?php \printf(
-			'<a href="%s" class="button" target="_blank">%s</a>',
-			\get_field( 'link', $post->ID ),
-			get_review_link_text()
-		); ?>
-	</div>
-	<?php
-}, 15 );
-
-\add_action( 'after_inner_template_part', function () {
-	if ( ! \is_singular( 'review' ) ) {
-		return;
-	}
-
-	global $post;
-
-	?>
-	<div class="review-cta-single">
-		<?php \printf(
-			'<a href="%s" class="button button-large" target="_blank">%s</a>',
-			\get_field( 'link', $post->ID ),
-			get_review_link_text()
-		); ?>
-	</div>
-	<?php
-
-} );
-
 /**
  * Description of expected behavior.
  *

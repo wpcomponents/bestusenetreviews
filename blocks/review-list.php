@@ -44,7 +44,7 @@ function render_review_list_block( $block, $content = '', $is_preview = false, $
 		<?php while ( $reviews->have_posts() ) :
 			$reviews->the_post();
 			global $post;
-			$en_id          = \wpml_object_id_filter( $post->ID, 'review', true, 'en' );
+			$en_id          = get_en_id( $post->ID );
 			$featured       = 1 === $count++;
 			$features       = [];
 			$feature_fields = [
@@ -95,7 +95,6 @@ function render_review_list_block( $block, $content = '', $is_preview = false, $
  * @return void
  */
 function render_default_review_layout( $post, $featured, $en_id ) {
-	$banner  = \get_field( 'banner', $post->ID );
 	$badge   = \get_field( 'badge', $en_id );
 	$reviews = \get_field( 'reviews', $en_id );
 	$blocks  = \parse_blocks( $post->post_content );
@@ -112,11 +111,7 @@ function render_default_review_layout( $post, $featured, $en_id ) {
 
 		$list = $block['innerHTML'];
 	}
-	?>
-	<?php if ( $banner ) : ?>
-		<div class="review-banner"><?php echo $banner; ?></div>
-	<?php endif; ?>
-	<?php if ( $badge ) : ?>
+	if ( $badge ) : ?>
 		<div class="review-badge">
 			<?php
 			echo \wp_get_attachment_image(

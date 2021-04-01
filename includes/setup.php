@@ -106,6 +106,8 @@ namespace BestUsenetReviews\Theme;
 			],
 		]
 	);
+
+	\add_post_type_support( 'page', 'excerpt' );
 } );
 
 \add_action( 'after_setup_theme', function () {
@@ -113,7 +115,7 @@ namespace BestUsenetReviews\Theme;
 		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 	}
 
-	$acf_pro    = '/advanced-custom-fields-pro/acf.php';
+	$acf_pro = '/advanced-custom-fields-pro/acf.php';
 
 	\add_filter( 'acf/settings/url', function () use ( $acf_pro ) {
 		return get_url() . 'vendor/advanced-custom-fields/advanced-custom-fields-pro/';

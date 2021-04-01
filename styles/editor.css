@@ -22,10 +22,18 @@
 	width: 100%;
 }
 
+#acf-group_6063e184677fd,
 .acf-field-6062a2b78131f {
 	display: none;
 }
 
+.lang-en #acf-group_6063e184677fd,
 .lang-en .acf-field-6062a2b78131f {
 	display: block;
+}
+
+.translations-block,
+.translation-block {
+	padding: 1em;
+	border: 2px solid rgba(100,100,100,0.2);
 }

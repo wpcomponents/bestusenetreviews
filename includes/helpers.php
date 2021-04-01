@@ -127,12 +127,19 @@ function get_action( $hook, $args = [] ) {
  *
  * @since 1.0.0
  *
- * @param int $characters
+ * @param int $paragraphs Default 5.
  *
  * @return string
  */
-function get_lorem_ipsum( $characters = 300 ) {
-	return \substr( 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.', 0, $characters );
+function get_lorem_ipsum( $paragraphs = 1 ) {
+	$lorem_ipsum = '';
+	$paragraph   = '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>';
+
+	for ( $i = 1; $i <= $paragraphs; $i++ ) {
+		$lorem_ipsum .= $paragraph;
+	}
+
+	return $lorem_ipsum;
 }
 
 /**
@@ -151,4 +158,86 @@ function unautop( $string ) {
 	$string = \str_replace( ']]>', ']]&gt;', $string );
 
 	return $string;
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param int $id
+ *
+ * @return int
+ */
+function get_en_id( $id ) {
+	return \wpml_object_id_filter(
+		(int) $id,
+		'review',
+		true,
+		'en'
+	);
+}
+
+/**
+ * Converts a string to different naming conventions.
+ *
+ * Camel:    myNameIsBond.
+ * Pascal:   MyNameIsBond.
+ * Snake:    my_name_is_bond.
+ * Ada:      My_Name_Is_Bond.
+ * Macro:    MY_NAME_IS_BOND.
+ * Kebab:    my-name-is-bond.
+ * Train:    My-Name-Is-Bond.
+ * Cobol:    MY-NAME-IS-BOND.
+ * Lower:    my name is bond.
+ * Upper:    MY NAME IS BOND.
+ * Title:    My Name Is Bond.
+ * Sentence: My name is bond.
+ * Dot:      my.name.is.bond.
+ *
+ * @since  0.3.0
+ *
+ * @author Lee Anthony https://seothemes.com
+ *
+ * @param string $string String to convert.
+ * @param string $case   Naming convention.
+ *
+ * @return string
+ */
+function convert_case( $string, $case = 'snake' ) {
+	$delimiters = 'sentence' === $case ? [ ' ', '-', '_' ] : [ ' ', '-', '_', '.' ];
+	$lower      = \trim( \str_replace( $delimiters, $delimiters[0], \strtolower( $string ) ), $delimiters[0] );
+	$upper      = \trim( \ucwords( $lower ), $delimiters[0] );
+	$pieces     = \explode( $delimiters[0], $lower );
+
+	$cases = [
+		'camel'    => \lcfirst( \str_replace( ' ', '', $upper ) ),
+		'pascal'   => \str_replace( ' ', '', $upper ),
+		'snake'    => \strtolower( \implode( '_', $pieces ) ),
+		'ada'      => \str_replace( ' ', '_', $upper ),
+		'macro'    => \strtoupper( \implode( '_', $pieces ) ),
+		'kebab'    => \strtolower( \implode( '-', $pieces ) ),
+		'train'    => \lcfirst( str_replace( ' ', '-', $upper ) ),
+		'cobol'    => \strtoupper( \implode( '-', $pieces ) ),
+		'lower'    => \strtolower( $string ),
+		'upper'    => \strtoupper( $string ),
+		'title'    => $upper,
+		'sentence' => \ucfirst( $lower ),
+		'dot'      => \strtolower( \implode( '.', $pieces ) ),
+	];
+
+	return isset( $cases[ $case ] ) ? $cases[ $case ] : $string;
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param mixed $data
+ *
+ * @return void
+ */
+function console_log( $data ) {
+	echo "<script>console.log(" . \json_encode( $data ) . ")</script>";
 }

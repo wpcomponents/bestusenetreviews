@@ -25,11 +25,11 @@ namespace BestUsenetReviews\Theme;
 function render_post_excerpt_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
 	?>
 	<div class="wp-block-post-excerpt">
-		<div class="wp-block-post-excerpt__excerpt">
+		<div class="wp-block-post-excerpt__excerpt has-medium-font-size">
 			<?php if ( \did_action( 'wp_body_open' ) ) : ?>
 				<?php \the_excerpt(); ?>
 			<?php else : ?>
-				<?php echo get_lorem_ipsum( 200 ); ?>
+				<?php echo get_lorem_ipsum( 1 ); ?>
 			<?php endif; ?>
 		</div>
 	</div>

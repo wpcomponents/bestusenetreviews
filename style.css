@@ -29,9 +29,9 @@
 	--wp--preset--color--success: #57bb81;
 	--wp--preset--gradient--primary: linear-gradient(180deg, #da9857 0%, #a87039 100%);
 	--wp--preset--gradient--secondary: linear-gradient(180deg, #c7c7c7 0%, #aeaeae 100%);
-	--wp--preset--font-size--small: 13px;
+	--wp--preset--font-size--small: 14px;
 	--wp--preset--font-size--normal: 16px;
-	--wp--preset--font-size--medium: 20px;
+	--wp--preset--font-size--medium: 22px;
 	--wp--preset--font-size--large: 36px;
 	--wp--preset--font-size--huge: 2.7em;
 	--wp--preset--font-family--mulish: Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -149,11 +149,16 @@ hr {
 .button,
 .wp-block-button__link {
 	position: relative;
+	display: inline-block;
 	padding: 1em 1.5em;
 	border-radius: var(--border-radius);
-	font-weight: var(--extra-bold);
-	line-height: 1;
 	box-shadow: 0 5px 20px -5px var(--wp--preset--color--link);
+	background: var(--wp--preset--gradient--primary);
+	color: #fff;
+	font-weight: var(--extra-bold);
+	text-decoration: none;
+	text-align: center;
+	line-height: 1;
 }
 
 .button:hover,
@@ -162,14 +167,6 @@ hr {
 .wp-block-button__link:focus {
 	transform: translateY(-3px);
 	box-shadow: 0 8px 20px -5px var(--wp--preset--color--link);
-}
-
-.button {
-	display: inline-block;
-	background: var(--wp--preset--gradient--primary);
-	color: #fff;
-	text-decoration: none;
-	text-align: center;
 }
 
 .button-secondary {
@@ -569,7 +566,7 @@ hr {
 
 .review-badge-single {
 	position: absolute;
-	right: calc(-100px - 2em);
+	right: -100px;
 }
 
 .review-intro-single {
@@ -689,6 +686,10 @@ hr {
 	margin: 0 0 1.5em;
 }
 
+.review-content li:last-of-type {
+	margin-bottom: 0;
+}
+
 .review-benefits {
 	font-size: 15px;
 	font-weight: normal;
@@ -732,9 +733,8 @@ hr {
 
 .review-more-link {
 	display: inline-block;
-	margin-top: 1.5em;
+	margin-top: 1em;
 	text-decoration: none;
-	line-height: 1;
 	font-size: small;
 	color: var(--wp--preset--color--body);
 }
@@ -764,6 +764,9 @@ hr {
 	position: absolute;
 	transform: rotate(-90deg);
 	stroke-dasharray: var(--total);
+}
+
+.in-viewport .review-circle {
 	stroke-dashoffset: var(--total);
 	animation: offsetAnimation 1s linear forwards;
 }
@@ -776,6 +779,9 @@ hr {
 
 .review-dot-container {
 	position: absolute;
+}
+
+.in-viewport .review-dot-container {
 	transform: rotate(0deg);
 	animation: dotAnimation 1s linear forwards;
 }
@@ -910,14 +916,6 @@ hr {
 	--heading-font-weight: var(--extra-bold);
 }
 
-.single-review .wp-site-inner {
-	--container-max-width: calc(var(--column-width) * 8);
-}
-
-.wider {
-	--container-max-width: calc(var(--column-width) * 10);
-}
-
 .is-style-rounded .aligncenter {
 	display: flex;
 	justify-content: center;
@@ -1025,6 +1023,7 @@ h1.no-margin {
 
 	.review-comparison-cta {
 		width: 20%;
+		padding-bottom: 0;
 	}
 
 	.review-badge ~ .review-content > p {

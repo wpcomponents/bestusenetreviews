@@ -8,7 +8,7 @@ namespace BestUsenetReviews\Theme;
 		'title'           => __( 'Review CTA', 'bestusenetreviews' ),
 		'description'     => __( 'Displays a review cta.', 'bestusenetreviews' ),
 		'render_callback' => __NAMESPACE__ . '\\render_review_cta_block',
-		'icon'            => 'align-wide',
+		'icon'            => 'align-center',
 	] );
 } );
 
@@ -21,7 +21,7 @@ namespace BestUsenetReviews\Theme;
  * @param int    $post_id    The post ID this block is saved to.
  */
 function render_review_cta_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
-	$en_id      = \wpml_object_id_filter( $post_id, 'review',  true, 'en' );
+	$en_id = get_en_id( $post_id );
 	$title = __( 'Get Special', 'bestusenetreviews' ) . ' ' . \get_field( 'discount', $en_id ) . __( '% Discount Now', 'bestusenetreviews' );
 	?>
 	<div class="review-cta-block">

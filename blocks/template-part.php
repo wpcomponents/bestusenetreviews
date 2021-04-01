@@ -31,6 +31,8 @@ function render_template_part_block( $block, $content = '', $is_preview = false,
 
 	if ( isset( $template_part->post_name ) ) {
 		do_template_part( $template_part->post_name );
+	} else {
+		__( 'Please select a template part →', 'bestusenetreviews' );
 	}
 }
 

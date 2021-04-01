@@ -23,52 +23,56 @@ namespace BestUsenetReviews\Theme;
  * @return void
  */
 function render_review_hero_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
-	$en_id  = \wpml_object_id_filter( $post_id, 'review', true, 'en' );
-	$banner = \get_field( 'banner', $post_id );
-	$badge  = \get_field( 'badge', $en_id );
-	$logo   = \get_field( 'logo_alt', $en_id );
-	?>
-	<div class="review-hero alignfull has-light-background-color">
-		<div class="review-hero-container wp-block-group__inner-container">
-			<?php
-			\the_post_thumbnail( 'full', [
-				'class' => 'review-background',
-				'width' => 200,
-			] );
-			?>
-			<div class="review-logo-wrap">
-				<?php if ( $banner ) : ?>
-					<div class="review-banner-single">
-						<?php echo $banner; ?>
-					</div>
-				<?php endif;
+	$admin = ! \did_action( 'wp_body_open' );
+	$post  = \get_post( $post_id );
+	$en_id = get_en_id( $post_id );
+	$badge = \get_field( 'badge', $en_id );
+	$logo  = \get_field( 'logo_alt', $en_id );
 
-				if ( $logo ) {
-					echo \wp_get_attachment_image(
-						$logo,
-						'full',
-						false,
-						[
-							'width' => 400,
-							'alt'   => \get_the_title() . ' ' . __( 'Site Logo', 'bestusenetreviews' ),
-						]
-					);
-				}
-
-				if ( $badge ) {
-					echo \wp_get_attachment_image(
-						$badge,
-						'full',
-						false,
-						[
-							'class' => 'review-badge-single',
-							'width' => 100,
-						]
-					);
-				}
-				?>
+	if ( $admin ) : ?>
+		<section class="review-hero alignfull has-light-background-color">
+			<div class="review-hero-container wp-block-group__inner-container">
+				<img src="https://fakeimg.pl/300x60/?text=Review+Logo&font=bebas&font_size=20">
 			</div>
-		</div>
-	</div>
-	<?php
+		</section>
+
+	<?php else : ?>
+		<section class="review-hero alignfull has-light-background-color" role="banner">
+			<div class="review-hero-container wp-block-group__inner-container">
+				<?php
+				\the_post_thumbnail( 'full', [
+					'class' => 'review-background',
+					'width' => 200,
+				] );
+				?>
+				<div class="review-logo-wrap">
+					<?php
+					if ( $logo ) {
+						echo \wp_get_attachment_image(
+							$logo,
+							'full',
+							false,
+							[
+								'width' => 400,
+								'alt'   => \get_the_title() . ' ' . __( 'Site Logo', 'bestusenetreviews' ),
+							]
+						);
+					}
+
+					if ( $badge ) {
+						echo \wp_get_attachment_image(
+							$badge,
+							'full',
+							false,
+							[
+								'class' => 'review-badge-single',
+								'width' => 100,
+							]
+						);
+					}
+					?>
+				</div>
+			</div>
+		</section>
+	<?php endif;
 }
