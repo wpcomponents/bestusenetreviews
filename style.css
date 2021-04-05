@@ -813,7 +813,8 @@ hr {
 }
 
 .review-stars {
-	width: calc((1em + 2px) * 5);
+	width: 5em;
+	height: 1em;
 	margin-top: 0.5em;
 	position: relative;
 	white-space: nowrap;
@@ -821,18 +822,24 @@ hr {
 	font-size: 16px;
 }
 
-.review-stars-empty {
+.review-stars-empty,
+.review-stars-color {
 	position: absolute;
 	left: 0;
-	overflow: hidden;
-	color: lightgrey;
+	width: 100%;
+	height: 1em;
+	background-repeat: repeat-x;
+	background-size: 1em;
+}
+
+.review-stars-empty {
+	right: 0;
+	background-image: url(svg/star-gray.svg);
 }
 
 .review-stars-color {
-	position: relative;
-	left: 0;
+	background-image: url(svg/star-orange.svg);
 	overflow: hidden;
-	color: darkorange;
 }
 
 .review-hero {

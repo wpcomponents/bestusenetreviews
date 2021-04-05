@@ -43,8 +43,8 @@ function render_review_rating_block( $block, $content = '', $is_preview = false,
 
 		<p class="review-score"><?php echo $rating; ?>/10</p>
 		<div class="review-stars">
-			<div class="review-stars-empty">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-			<div class="review-stars-color" style="width:<?php echo $percentage; ?>%">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+			<div class="review-stars-empty"></div>
+			<div class="review-stars-color" style="width:<?php echo $percentage; ?>%"></div>
 		</div>
 	</div>
 	<?php
