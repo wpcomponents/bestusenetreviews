@@ -237,7 +237,7 @@ function render_category_review_layout( $post, $featured, $en_id ) {
 function render_comparison_review_layout( $post, $featured, $en_id ) {
 	$features = [
 		'trial'       => __( 'Free Trial', 'bestusenetreviews' ),
-		'servers'     => __( 'US & EU Servers', 'bestusenetreviews' ),
+		'security'    => __( '256-Bit SSL Security', 'bestusenetreviews' ),
 		'connections' => __( 'Connections', 'bestusenetreviews' ),
 		'speed'       => __( 'Unlimited Speeds', 'bestusenetreviews' ),
 		'plans'       => __( 'Annual Plans', 'bestusenetreviews' ),
@@ -300,8 +300,8 @@ function render_comparison_review_layout( $post, $featured, $en_id ) {
 				<td>
 					<?php
 					$field = \get_field( $name, $en_id );
-
 					$value = \is_bool( $field ) && $field ? __( 'Yes', 'bestusenetreviews' ) : $field;
+					$value = ( 'speed' === $name ) ? __( 'Up to', 'bestusenetreviews' ) . " $value " . __( 'Gbps', 'bestusenetreviews' ) : $value;
 					?>
 					<p><?php echo $value; ?></p>
 				</td>

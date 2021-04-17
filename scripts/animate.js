@@ -1,6 +1,6 @@
 ( function() {
-	var elements;
-	var windowHeight;
+	let elements;
+	let windowHeight;
 
 	function init() {
 		elements     = document.querySelectorAll( '.review-rating' );
@@ -8,9 +8,9 @@
 	}
 
 	function checkPosition() {
-		for ( var i = 0; i < elements.length; i ++ ) {
-			var element         = elements[ i ];
-			var positionFromTop = elements[ i ].getBoundingClientRect().top;
+		for ( let i = 0; i < elements.length; i ++ ) {
+			const element         = elements[ i ];
+			const positionFromTop = elements[ i ].getBoundingClientRect().top;
 
 			if ( positionFromTop - windowHeight <= 0 ) {
 				element.classList.add( 'in-viewport' );

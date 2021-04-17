@@ -25,6 +25,16 @@ function render_review_cta_block( $block, $content = '', $is_preview = false, $p
 	$title = __( 'Get Special', 'bestusenetreviews' ) . ' ' . \get_field( 'discount', $en_id ) . __( '% Discount Now', 'bestusenetreviews' );
 	?>
 	<div class="review-cta-block">
+		<p>
+		<?php echo \wp_get_attachment_image(
+			\get_field( 'logo_alt', $en_id ),
+			'full',
+			false,
+			[
+				'width' => 200,
+			]
+		); ?>
+		</p>
 		<h2><strong><?php echo $title; ?></strong></h2>
 		<?php \printf(
 			'<a href="%s" class="button" target="_blank">%s</a>',
