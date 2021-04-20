@@ -183,13 +183,13 @@ function render_category_review_layout( $post, $featured, $en_id ) {
 		$features = [
 			'trial' => __( 'Free Trial', 'bestusenetreviews' ),
 			'vpn'   => __( 'VPN Included', 'bestusenetreviews' ),
-			'speed' => __( 'Unlimited Speeds', 'bestusenetreviews' ),
+			'speed' => __( 'Unlimited Speeds', 'bestusenetreviews' ) . ' ' . __( 'Up to', 'bestusenetreviews' ) . ' 1 ' . __( 'Gbps', 'bestusenetreviews' ),
 		];
 	} else {
 		$features = [
 			'retention'   => __( 'Days of Retention', 'bestusenetreviews' ),
 			'connections' => __( 'Connections', 'bestusenetreviews' ),
-			'servers'     => __( 'US & EU Servers', 'bestusenetreviews' ),
+			'security'    => __( '256-Bit SSL Security', 'bestusenetreviews' ),
 		];
 	}
 
@@ -210,7 +210,15 @@ function render_category_review_layout( $post, $featured, $en_id ) {
 			<?php $value = \get_field( $name, $en_id ); ?>
 			<li class="review-feature">
 				<span class="icon-feature icon-<?php echo $name; ?>"><?php echo \file_get_contents( get_dir() . "svg/feature-{$name}.svg" ) ?></span>
-				<p><?php echo $value && \is_string( $value ) ? "$value $label" : $label; ?></p>
+				<p>
+					<?php
+					if ( \in_array( $name, [ 'trial', 'vpn', 'speed', 'security' ] ) ) {
+						echo $label;
+					} else {
+						echo "$value $label";
+					}
+					?>
+				</p>
 			</li>
 		<?php endforeach; ?>
 	</ul>
