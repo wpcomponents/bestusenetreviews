@@ -37,7 +37,7 @@ namespace BestUsenetReviews\Theme;
 		'label'               => __( 'Review', 'bestusenetreviews' ),
 		'description'         => __( 'Review Description', 'bestusenetreviews' ),
 		'labels'              => $labels,
-		'supports'            => [ 'title', 'excerpt', 'editor', 'thumbnail' ],
+		'supports'            => [ 'title', 'excerpt', 'editor', 'thumbnail', 'page-attributes' ],
 		'taxonomies'          => [],
 		'hierarchical'        => false,
 		'public'              => true,

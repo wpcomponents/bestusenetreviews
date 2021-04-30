@@ -24,6 +24,14 @@ namespace BestUsenetReviews\Theme;
 	return $mimes;
 }, 10, 1 );
 
+\add_filter( 'admin_body_class', function ( $classes ) {
+	if ( ! isset( $_GET['lang'] ) || ( isset( $_GET['lang'] ) && 'en' === $_GET['lang'] ) ) {
+		$classes .= ' lang-en';
+	}
+
+	return $classes;
+} );
+
 \add_filter( 'manage_review_posts_columns', function ( $post_columns ) {
 	$post_columns['menu_order'] = __( 'Order', 'bestusenetreviews' );
 
@@ -43,12 +51,3 @@ namespace BestUsenetReviews\Theme;
 
 	return $columns;
 }, 10, 1 );
-
-\add_filter( 'admin_body_class', function ( $classes ) {
-	if ( ! isset( $_GET['lang'] ) || ( isset( $_GET['lang'] ) && 'en' === $_GET['lang'] ) ) {
-		$classes .= ' lang-en';
-	}
-
-
-	return $classes;
-} );
