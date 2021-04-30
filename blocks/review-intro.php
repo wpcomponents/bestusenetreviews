@@ -70,11 +70,7 @@ function render_review_intro_block( $block, $content = '', $is_preview = false, 
 				</div>
 			</div>
 
-			<?php \printf(
-				'<a href="%s" class="button" target="_blank">%s</a>',
-				\get_field( 'link', $en_id ),
-				get_review_link_text()
-			); ?>
+			<?php echo get_cta_button( $post->ID ); ?>
 		</div>
 	<?php endif;
 }

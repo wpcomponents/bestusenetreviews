@@ -417,7 +417,7 @@ msgstr "Besuchen "
 
 #: includes/review.php:168
 msgid " Now"
-msgstr " jetzt"
+msgstr " Jetzt"
 
 #: includes/setup.php:131
 msgid ""

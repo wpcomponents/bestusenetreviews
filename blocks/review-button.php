@@ -35,11 +35,7 @@ function render_review_button_block( $block, $content = '', $is_preview = false,
 		</div>
 	<?php elseif ( 'review' === $post->post_type ) : ?>
 		<div class="review-cta-single">
-			<?php \printf(
-				'<a href="%s" class="button button-large" target="_blank">%s</a>',
-				\get_field( 'link', $en_id ),
-				get_review_link_text()
-			); ?>
+			<?php echo get_cta_button( $post->ID, 'button-large' ); ?>
 		</div>
 	<?php endif;
 }

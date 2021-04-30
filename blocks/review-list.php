@@ -150,12 +150,10 @@ function render_default_review_layout( $post, $featured, $en_id ) {
 			);
 			?>
 			<?php
-			\printf(
-				'<a href="%s" class="button%s" target="_blank">%s</a>',
-				\get_field( 'link', $en_id ),
-				$featured ? '' : ' button-secondary',
-				get_review_link_text()
-			);
+			$button_class = $featured ? '' : ' button-secondary';
+
+			echo get_cta_button( $post->ID, $button_class );
+
 			\printf(
 				'<a href="%s" class="review-more-link">%s %s</a>',
 				\get_permalink(),
@@ -200,7 +198,7 @@ function render_category_review_layout( $post, $featured, $en_id ) {
 		'full',
 		false,
 		[
-			'width' => 100,
+			'width' => 200,
 		]
 	);
 	?>
@@ -222,13 +220,11 @@ function render_category_review_layout( $post, $featured, $en_id ) {
 			</li>
 		<?php endforeach; ?>
 	</ul>
-	<?php \printf(
-		'<a href="%s" class="button%s" target="_blank">%s</a>',
-		\get_field( 'link', $en_id ),
-		$featured ? '' : ' button-secondary',
-		__( 'Visit Website', 'bestusenetreviews' )
-	); ?>
 	<?php
+	$button_class = $featured ? '' : ' button-secondary';
+	$button_text  = __( 'Visit Website', 'bestusenetreviews' );
+
+	echo get_cta_button( $post->ID, $button_class, $button_text );
 }
 
 /**
@@ -317,12 +313,12 @@ function render_comparison_review_layout( $post, $featured, $en_id ) {
 		</tr>
 	</table>
 	<div class="review-comparison-cta">
-		<?php \printf(
-			'<a href="%s" class="button%s" target="_blank">%s</a>',
-			\get_field( 'link', $en_id ),
-			$featured ? '' : ' button-secondary',
-			__( 'Visit Website', 'bestusenetreviews' )
-		); ?>
+		<?php
+		$button_class = $featured ? '' : ' button-secondary';
+		$button_text  = __( 'Visit Website', 'bestusenetreviews' );
+
+		echo get_cta_button( $post->ID, $button_class, $button_text );
+		?>
 	</div>
 	<?php
 }
