@@ -104,6 +104,7 @@ namespace BestUsenetReviews\Theme;
 					true,
 					[
 						'class'  => 'top-bar-icon',
+						'alt'   => \get_the_title( $top_bar_icon ),
 						'height' => 20,
 						'width'  => 20,
 					] );
@@ -114,10 +115,11 @@ namespace BestUsenetReviews\Theme;
 				<div class="popup-column">
 					<?php echo \wp_get_attachment_image(
 						$main_image,
-						'full',
+						'medium',
 						true,
 						[
 							'class' => 'main-image',
+							'alt'   => \get_the_title( $main_image ),
 						]
 					); ?>
 					<div class="rated-by">
@@ -129,6 +131,7 @@ namespace BestUsenetReviews\Theme;
 							[
 								'class' => 'rating-logo',
 								'width' => 90,
+								'alt'   => \get_the_title( $rating_logo ),
 							]
 						); ?>
 					</div>
@@ -147,6 +150,7 @@ namespace BestUsenetReviews\Theme;
 						[
 							'class' => 'trust-logo',
 							'width' => 120,
+							'alt'   => \get_the_title( $trust_logo ),
 						] ); ?>
 				</div>
 			</div>

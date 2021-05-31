@@ -23,7 +23,7 @@
 
 .popup {
 	position: relative;
-	width: calc(var(--column-width) * 8);
+	width: calc(var(--column-width) * 7.5);
 	max-width: 90vw;
 	background: #fff;
 	border-radius: var(--border-radius);
@@ -68,7 +68,8 @@
 }
 
 .main-image {
-	width: 18em;
+	width: 300px;
+	max-width: 80vw;
 	height: auto;
 	margin-bottom: 2em;
 }
@@ -78,7 +79,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 16em;
+	width: 15em;
 	height: 2.5em;
 	color: #fff;
 	background: var(--wp--preset--color--heading);
