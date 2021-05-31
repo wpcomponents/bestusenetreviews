@@ -2,7 +2,7 @@
 
 namespace BestUsenetReviews\Theme;
 
-add_filter( 'block_type_metadata_settings', function ( $settings, $metadata ) {
+add_filter( 'block_type_metadata_settings', function ( $settings ) {
 	if ( isset( $settings['render_callback'] ) && 'gutenberg_render_block_core_navigation_link' === $settings['render_callback'] ) {
 		$settings['render_callback'] = __NAMESPACE__ . '\\gutenberg_render_block_core_navigation_link';
 	}

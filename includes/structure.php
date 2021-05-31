@@ -56,6 +56,10 @@ namespace BestUsenetReviews\Theme;
 		$classes[] = 'has-sidebar';
 	}
 
+	if ( get_language() ) {
+		$classes[] = 'lang-' . get_language();
+	}
+
 	return $classes;
 } );
 

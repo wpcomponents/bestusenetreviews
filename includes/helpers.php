@@ -241,3 +241,7 @@ function convert_case( $string, $case = 'snake' ) {
 function console_log( $data ) {
 	echo "<script>console.log(" . \json_encode( $data ) . ")</script>";
 }
+
+function get_language() {
+	return \defined( 'ICL_LANGUAGE_CODE' ) && ICL_LANGUAGE_CODE ? ICL_LANGUAGE_CODE : null;
+}

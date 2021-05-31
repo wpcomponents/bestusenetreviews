@@ -1,0 +1,144 @@
+.popup-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 99999;
+	opacity: 0;
+}
+
+.popup-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--wp--preset--color--black);
+	opacity: 0.8;
+}
+
+.popup {
+	position: relative;
+	width: calc(var(--column-width) * 8);
+	max-width: 90vw;
+	background: #fff;
+	border-radius: var(--border-radius);
+	text-align: center;
+	font-weight: bolder;
+	line-height: 1.5;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.popup-topbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5em 0;
+	background: var(--wp--preset--color--shadow);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.popup-topbar p {
+	margin: 0 0 0 .5em;
+	color: var(--wp--preset--color--heading);
+}
+
+.popup-columns {
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+}
+
+.popup-column {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin-right: 2em;
+}
+
+.popup-column:last-of-type {
+	margin-right: 0;
+}
+
+.main-image {
+	width: 18em;
+	height: auto;
+	margin-bottom: 2em;
+}
+
+.rated-by {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 16em;
+	height: 2.5em;
+	color: #fff;
+	background: var(--wp--preset--color--heading);
+}
+
+.rated-by:before,
+.rated-by:after {
+	position: absolute;
+	left: -.5em;
+	top: .25em;
+	content: '';
+	width: 0;
+	height: 2em;
+	margin-right: auto;
+	border: 1em solid var(--wp--preset--color--dark);
+	border-left-width: .25em;
+	border-right-width: .25em;
+	border-left-color: #fff;
+}
+
+.rated-by:after {
+	left: auto;
+	right: -.5em;
+	margin-right: 0;
+	margin-left: auto;
+	border-left-width: .25em;
+	border-right-width: .25em;
+	border-left-color: var(--wp--preset--color--dark);
+	border-right-color: #fff;
+}
+
+.rated-by span {
+	margin-right: .5em;
+	white-space: nowrap;
+	font-size: 0.9em;
+}
+
+.popup h2 {
+	margin-bottom: 1rem;
+	font-size: 44px;
+	line-height: 1.2;
+}
+
+.popup-button {
+	width: 15em;
+	margin-bottom: 1.5em;
+}
+
+@media (max-width: 800px) {
+
+	.popup-columns {
+		flex-wrap: wrap;
+	}
+
+	.popup-column {
+		margin: 0;
+	}
+
+	.popup h2 {
+		margin-top: .5em;
+		font-size: 40px;
+	}
+}
